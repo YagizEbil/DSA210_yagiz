@@ -1,7 +1,7 @@
 **# DSA210_Yagiz - Vehicle Sensor Data Analysis**
 ---
 
-### **"Exploring Data, Driving Insights"**
+### **Exploring Data, Driving Insights**
 
 ---
 
