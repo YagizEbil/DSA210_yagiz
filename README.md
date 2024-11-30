@@ -22,14 +22,14 @@ A Project on Vehicle Dynamics and Patterns by [Kadir Yağız Ebil](https://githu
 ### **Introduction**  
 Welcome to the comprehensive study of vehicle sensor data! This project leverages insights from over 51 diverse sensors to analyze driving behavior, vehicle performance, and environmental interactions. With applications ranging from fuel efficiency analysis to understanding driving habits.
 
+![alt text](dataflow.png)
+
 ---
 
 #### *Embark on the journey to decode your drive!*
 ## Description of Dataset
 
 This project involves a dataset containing sensor data from a vehicle, collected via an [OBD module](#obd-module-description). The dataset captures various vehicle parameters and environmental conditions, structured as follows:
-
-![alt text](dataflow.png)
 
 ### Sample Data (CSV Format)
 ```csv
