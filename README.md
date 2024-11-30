@@ -91,10 +91,11 @@ For a complete list of all 51 sensors, refer to the **[Full Sensor Descriptions]
 
 The dataset relies on data collected from an On-Board Diagnostics (OBD) module. OBD is a standardized system in vehicles that monitors and reports on various engine and vehicle parameters. Key features of the OBD system:
 
-	•	Real-Time Data Collection: Captures data such as speed, RPM, throttle position, and more.
-	•	Fault Code Detection: Identifies engine or system malfunctions through diagnostic trouble codes (DTCs).
-	•	Connectivity: Compatible with most modern vehicles, allowing for consistent data extraction.
+![alt text](image.png)
 
+- Real-Time Data Collection: Captures data such as speed, RPM, throttle position, and more.
+- Fault Code Detection: Identifies engine or system malfunctions through diagnostic trouble codes (DTCs).
+- Connectivity: Compatible with most modern vehicles, allowing for consistent data extraction.
 ### Full Sensor Descriptions
 
 Below is the comprehensive list of all 51 sensors included in the dataset, along with their detailed descriptions:
