@@ -8,15 +8,9 @@
 ### **Author**:  
 A Project on Vehicle Dynamics and Patterns by [Kadir Yağız Ebil](https://github.com/YagizEbil) 
 
-
-### **Introduction**  
-Welcome to the comprehensive study of vehicle sensor data! This project leverages insights from over 51 diverse sensors to analyze driving behavior, vehicle performance, and environmental interactions. With applications ranging from fuel efficiency analysis to understanding driving habits.
-
----
-
 ### **Table of Contents**
 
-1. [Introduction](#project-motivationidea)  
+1. [Introduction](#introduction)  
 2. [Dataset Overview](#description-of-dataset)  
 3. [Sensors and Data Fields](#sensor-details)  
 4. [Project Goals](#project-motivationidea)  
@@ -25,12 +19,17 @@ Welcome to the comprehensive study of vehicle sensor data! This project leverage
 
 ---
 
+### **Introduction**  
+Welcome to the comprehensive study of vehicle sensor data! This project leverages insights from over 51 diverse sensors to analyze driving behavior, vehicle performance, and environmental interactions. With applications ranging from fuel efficiency analysis to understanding driving habits.
+
+![alt text](dataflow.png)
+
+---
+
 #### *Embark on the journey to decode your drive!*
 ## Description of Dataset
 
 This project involves a dataset containing sensor data from a vehicle, collected via an [OBD module](#obd-module-description). The dataset captures various vehicle parameters and environmental conditions, structured as follows:
-
-![alt text](dataflow.png)
 
 ### Sample Data (CSV Format)
 ```csv
