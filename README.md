@@ -7,8 +7,8 @@
 
 ### **Author**:  
 A Project on Vehicle Dynamics and Patterns by [Kadir Yağız Ebil](https://github.com/YagizEbil)
- 
-[Website of this project (under developement)](https://vehicle-sense-navigator.lovable.app)
+
+[Website](https://vehicle-sense-navigator.lovable.app) of this project (under developement)
 ### **Table of Contents**
 
 1. [Introduction](#introduction)  
