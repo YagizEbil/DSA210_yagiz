@@ -14,8 +14,9 @@ A Project on Vehicle Dynamics and Patterns by [Kadir Yağız Ebil](https://githu
 2. [Dataset Overview](#description-of-dataset)  
 3. [Sensors and Data Fields](#sensor-details)  
 4. [Project Goals](#project-motivationidea)  
-5. [Current Progress](#current-progress)  
-6. [Challenges and Future Directions](#possible-limitations-and-future-plans)  
+5. [Results for Analysis](#results-for-analysis)
+6. [Results for Predictive Model](#results-for-predictive-model)
+7. [Challenges and Future Directions](#possible-limitations-and-future-plans)  
 
 ---
 
@@ -81,19 +82,110 @@ This analysis aims to uncover patterns that can improve driving efficiency, vehi
 
 ---
 
-## Current Progress
+## Results for Analysis
 
-### Data Preparation
-- **Data Gathering**: Data from 51 vehicle sensors has been collected using an OBD module.
-- **Data Cleaning**: Irrelevant or redundant data has been removed, ensuring only meaningful metrics remain.
-- **Data Format**: Organized in CSV format, with consistent structure across all entries.
+### Data Cleaning and Preprocessing
+	•	Successfully loaded all CSV files in the data folder into a Python dictionary.
+	•	Removed unnamed columns and ensured a clean, structured format for analysis.
+	•	Sorted the dataset chronologically for accurate analysis and visualization.
 
-### Next Steps
-- **Exploratory Data Analysis (EDA)**: Initial analysis to identify trends and correlations.
-- **Pattern Detection**: Investigate potential links between driving styles and specific sensor readings.
-- **Comparative Tests**: Examine the effects of different fuel providers on performance metrics.
+### Comparison of Driving Styles: Father vs. Me
+	1.	Speed Analysis:
+	•	Differences in driving habits highlighted smoother speed variations for “Father” and more aggressive changes for “Me”.
+	•	Data saved to data/father_speed.txt and data/me_speed.txt.
+	2.	Throttle Position Analysis:
+	•	“Father” exhibited consistent throttle control, while “Me” had wider variations, indicating aggressive acceleration.
+	•	Data saved to data/father_throttle.txt and data/me_throttle.txt.
+	3.	Statistical Findings:
+	•	Average, maximum, and standard deviations calculated for key metrics.
+	•	Statistical summary saved in driving_behavior_comparison.csv.
+	4.	Hypothesis Testing:
+	•	T-tests showed significant differences in driving styles for specific metrics such as throttle position and acceleration.
+
+### Fuel Provider Comparison
+	1.	Radar Chart Metrics:
+	•	Normalized values for key metrics (e.g., Engine Load, Fuel Efficiency).
+	•	Derived metrics such as “Aggressiveness”, “Efficiency”, and “Load to RPM Ratio”.
+	•	Data saved in data/fuel_provider_comparison.txt.
+	2.	Provider Insights:
+	•	Radar charts revealed significant differences between fuel providers.
+	•	“Provider C” demonstrated the highest efficiency, while “Provider A” had higher aggressiveness metrics.
+
+### Visual Highlights
+	•	Comparative line plots for driving metrics saved in the images folder.
+	•	Radar chart visualizing fuel provider performance displayed key distinctions.
 
 ---
+
+## Results for Predictive Model
+### Model Development for Predicting Instant Fuel Rate
+#### 1. Data Loading and Preprocessing
+##### Files Loaded
+- All CSV files in the data folder were successfully loaded and combined into a single DataFrame.
+##### Data Cleaning
+- Dropped irrelevant columns (LATITUDE, LONGITUDE, etc.).
+- Filtered data to retain only relevant PIDs for analysis, including Vehicle speed, Engine RPM, and Throttle position.
+##### Data Transformation
+- Pivoted the data to create a wide format, where each PID became a feature.
+- Engineered new features like Engine RPM x1000 and Instant engine power for better predictive capabilities.
+##### Feature Scaling
+- Applied StandardScaler to normalize feature values for improved model performance.
+#### 2. Model Training
+##### Split Data
+- Data split into training (80%) and testing (20%) sets.
+##### Model Used
+- Random Forest Regressor, initialized with default parameters.
+###### Initial Results
+- Mean Absolute Error (MAE): 0.281700095467111
+- Root Mean Squared Error (RMSE): 0.40095810517024466
+- R-squared (R2): 0.7099489148184635
+
+#### 3. Hyperparameter Tuning
+
+##### Grid Search
+- Performed a grid search over parameters like `n_estimators`, `max_depth`, and `min_samples_split`.
+
+##### Best Model
+- Achieved improved R2 score: Best R2
+
+##### Hyperparameter Combination
+- Example: `n_estimators = 200`, `max_depth = 30`, `min_samples_split = 2`, `min_samples_leaf = 1`.
+
+#### 4. Feature Importance
+
+##### Top Features
+- Engine RPM
+- Calculated engine load value
+- Throttle position
+
+##### Insights
+- Features related to engine dynamics and vehicle load had the highest predictive impact.
+
+#### 5. Model Deployment
+
+##### Saved Artifacts
+- Model saved as `random_forest_model.pkl`.
+- Scaler saved as `scaler.pkl`.
+
+##### Prediction Function
+- Created a reusable function to predict the instant fuel rate for new data inputs.
+
+#### 6. Example Prediction
+
+##### Input
+- [60 km/h, 2500 RPM, 90°C coolant, 50% throttle, 100 kPa intake pressure, etc.]
+
+##### Predicted Instant Fuel Rate
+- 3.7529546851857742
+
+#### Key Findings
+
+##### Driving Dynamics
+- High throttle usage and engine load directly increased the predicted fuel rate.
+- Steady driving with lower acceleration resulted in more efficient fuel usage.
+
+##### Feature Contribution
+- Engine RPM and load-to-power ratio emerged as critical factors for predicting fuel rates.
 
 ## Sensor Details
 
@@ -192,7 +284,5 @@ These sensors collectively provide a comprehensive view of vehicle performance, 
 ### Future Work
 1. **Expand Dataset**: Collect data from additional vehicles to improve reliability and generalizability.
 2. **Include External Variables**: Incorporate environmental data, such as weather and traffic conditions, for a more comprehensive analysis.
-3. **Machine Learning Applications**: Develop predictive models to analyze driving behavior, fuel efficiency, and maintenance needs.
-4. **Integration with Fuel Data**: Conduct controlled experiments to evaluate fuel efficiency across different fuel providers.
 
 This project has the potential to enhance our understanding of driving patterns, improve vehicle efficiency, and promote better driving habits through data-driven insights.
