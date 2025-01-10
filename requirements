@@ -1,2 +1,6 @@
 pandas
 matplotlib
+glob2
+scipy
+scikit-learn
+joblib
