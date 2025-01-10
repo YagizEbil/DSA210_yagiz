@@ -7,7 +7,7 @@
 
 ### **Author**:  
 A Project on Vehicle Dynamics and Patterns by [Kadir Yağız Ebil](https://github.com/YagizEbil) 
-
+[Website of this project (under developement)](https://vehicle-sense-navigator.lovable.app)
 ### **Table of Contents**
 
 1. [Introduction](#introduction)  
@@ -287,5 +287,6 @@ These sensors collectively provide a comprehensive view of vehicle performance, 
 ### Future Work
 1. **Expand Dataset**: Collect data from additional vehicles to improve reliability and generalizability.
 2. **Include External Variables**: Incorporate environmental data, such as weather and traffic conditions, for a more comprehensive analysis.
+3. **Complete The WebPage**: Web page for this project will be completed.
 
 This project has the potential to enhance our understanding of driving patterns, improve vehicle efficiency, and promote better driving habits through data-driven insights.
