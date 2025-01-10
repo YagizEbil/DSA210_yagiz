@@ -85,35 +85,38 @@ This analysis aims to uncover patterns that can improve driving efficiency, vehi
 ## Results for Analysis
 
 ### Data Cleaning and Preprocessing
-	•	Successfully loaded all CSV files in the data folder into a Python dictionary.
-	•	Removed unnamed columns and ensured a clean, structured format for analysis.
-	•	Sorted the dataset chronologically for accurate analysis and visualization.
+* Successfully loaded all CSV files in the data folder into a Python dictionary.
+* Removed unnamed columns and ensured a clean, structured format for analysis.
+* Sorted the dataset chronologically for accurate analysis and visualization.
 
 ### Comparison of Driving Styles: Father vs. Me
-	1.	Speed Analysis:
-	•	Differences in driving habits highlighted smoother speed variations for “Father” and more aggressive changes for “Me”.
-	•	Data saved to data/father_speed.txt and data/me_speed.txt.
-	2.	Throttle Position Analysis:
-	•	“Father” exhibited consistent throttle control, while “Me” had wider variations, indicating aggressive acceleration.
-	•	Data saved to data/father_throttle.txt and data/me_throttle.txt.
-	3.	Statistical Findings:
-	•	Average, maximum, and standard deviations calculated for key metrics.
-	•	Statistical summary saved in driving_behavior_comparison.csv.
-	4.	Hypothesis Testing:
-	•	T-tests showed significant differences in driving styles for specific metrics such as throttle position and acceleration.
+1.	Speed Analysis:
+	* Differences in driving habits highlighted smoother speed variations for “Father” and more aggressive changes for “Me”.
+	* Data saved to data/father_speed.txt and data/me_speed.txt.
+2.	Throttle Position Analysis:
+	* “Father” exhibited consistent throttle control, while “Me” had wider variations, indicating aggressive acceleration.
+	* Data saved to data/father_throttle.txt and data/me_throttle.txt.
+3.	Statistical Findings:
+	* Average, maximum, and standard deviations calculated for key metrics.
+	* Statistical summary saved in driving_behavior_comparison.csv.
+4.	Hypothesis Testing:
+	* T-tests showed significant differences in driving styles for specific metrics such as throttle position and acceleration.
 
 ### Fuel Provider Comparison
-	1.	Radar Chart Metrics:
-	•	Normalized values for key metrics (e.g., Engine Load, Fuel Efficiency).
-	•	Derived metrics such as “Aggressiveness”, “Efficiency”, and “Load to RPM Ratio”.
-	•	Data saved in data/fuel_provider_comparison.txt.
-	2.	Provider Insights:
-	•	Radar charts revealed significant differences between fuel providers.
-	•	“Provider C” demonstrated the highest efficiency, while “Provider A” had higher aggressiveness metrics.
+1.	Radar Chart Metrics:
+	* Normalized values for key metrics (e.g., Engine Load, Fuel Efficiency).
+	* Derived metrics such as “Aggressiveness”, “Efficiency”, and “Load to RPM Ratio”.
+	* Data saved in data/fuel_provider_comparison.txt.
+2.	Provider Insights:
+	* Radar charts revealed significant differences between fuel providers.
+	* “Provider C” demonstrated the highest efficiency, while “Provider A” had higher aggressiveness metrics.
+
+#### Notes
+Cannot publihs providers because of legal reasons
 
 ### Visual Highlights
-	•	Comparative line plots for driving metrics saved in the images folder.
-	•	Radar chart visualizing fuel provider performance displayed key distinctions.
+* Comparative line plots for driving metrics saved in the images folder.
+* Radar chart visualizing fuel provider performance displayed key distinctions.
 
 ---
 
